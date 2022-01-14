@@ -471,3 +471,164 @@ Date:   Thu Sep 30 03:12:40 2021 +0530
 
 saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
 $
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   instr.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git add .
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git commit -m "new instructions
+> "
+[main 1eb7ddc] new instructions
+ 1 file changed, 473 insertions(+), 1 deletion(-)
+ rewrite instr.txt (100%)
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 3.37 KiB | 3.37 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Sakshat682/Another-sample.git
+   212cd8b..1eb7ddc  main -> main
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git log --pretty
+commit 1eb7ddca3664b8a8712ce739889c1efc7735e04d (HEAD -> main, origin/main)
+Author: Sakshat Jain <sakshat1310jain@gmail.com>
+Date:   Sat Jan 15 00:37:26 2022 +0530
+
+    new instructions
+
+commit 212cd8bc4fc7fb633d977c00c652f062f6e0f64c
+Merge: 796f098 301fdbd
+Author: Sakshat Jain <sakshat1310jain@gmail.com>
+Date:   Sat Jan 15 00:34:35 2022 +0530
+
+    Merge branch 'main' of https://github.com/Sakshat682/Another-sample
+
+commit 796f0986d410a3085f4852652fe100650cde6621
+Author: Sakshat Jain <sakshat1310jain@gmail.com>
+Date:   Sat Jan 15 00:20:35 2022 +0530
+
+    Instructions added
+
+commit 301fdbdd3b639c11cae22b8902b3f93b502dc452
+Merge: ed6871a c9d5a9e
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:38:07 2021 +0530
+
+    Merge branch 'main' of https://github.com/Sakshat682/Another-sample into dev
+
+commit ed6871a14b860a8349758d2d875dc5058f99ca9f
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:35:34 2021 +0530
+
+    create extra.txt
+
+commit c9d5a9edb793bd18d74542a3d927f51a28be239e
+Merge: 1465481 9f60601
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:27:43 2021 +0530
+
+    Merge pull request #1 from Sakshat682/dev
+
+    create forMe.txt
+
+commit 9f606012153c3d4a8b587c3664fec30205af85dc
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:24:25 2021 +0530
+
+    create forMe.txt
+
+commit 14654811fc82a48382d4548676ee25578198141a
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:17:56 2021 +0530
+
+    Delete forU.txt
+
+commit 19228268c79aa7a96b85a2d8af708ff78b464c87
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:16:15 2021 +0530
+
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git log --pretty --oneline
+1eb7ddc (HEAD -> main, origin/main) new instructions
+212cd8b Merge branch 'main' of https://github.com/Sakshat682/Another-sample
+796f098 Instructions added
+301fdbd Merge branch 'main' of https://github.com/Sakshat682/Another-sample into dev
+ed6871a create extra.txt
+c9d5a9e Merge pull request #1 from Sakshat682/dev
+9f60601 create forMe.txt
+1465481 Delete forU.txt
+1922826 Create forU.txt
+777a905 Create world.txt
+da9c7db Merge branch 'main' of https://github.com/Sakshat682/Another-sample into main
+135e1b8 add hello.txt
+cb3ff08 Create README.md
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git config --global core.editor "code --wait"
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ code
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git config --global alias.st status
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git st
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git config --global alias.startpull 'pull origin main --allow-unrelated-histories'
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git startpull
+From https://github.com/Sakshat682/Another-sample
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git log --pretty=oneline
+1eb7ddca3664b8a8712ce739889c1efc7735e04d (HEAD -> main, origin/main) new instructions
+212cd8bc4fc7fb633d977c00c652f062f6e0f64c Merge branch 'main' of https://github.com/Sakshat682/Another-sample
+796f0986d410a3085f4852652fe100650cde6621 Instructions added
+301fdbdd3b639c11cae22b8902b3f93b502dc452 Merge branch 'main' of https://github.com/Sakshat682/Another-sample into dev
+ed6871a14b860a8349758d2d875dc5058f99ca9f create extra.txt
+c9d5a9edb793bd18d74542a3d927f51a28be239e Merge pull request #1 from Sakshat682/dev
+9f606012153c3d4a8b587c3664fec30205af85dc create forMe.txt
+14654811fc82a48382d4548676ee25578198141a Delete forU.txt
+19228268c79aa7a96b85a2d8af708ff78b464c87 Create forU.txt
+777a905fbbeb1ec624aed76406b7aef83ea6063e Create world.txt
+da9c7db5b37528a301eb4fe5065c0012af13fc52 Merge branch 'main' of https://github.com/Sakshat682/Another-sample into main
+135e1b80f70b0f80dedb7f2c7d5a720b57be5baa add hello.txt
+cb3ff0880e785edfb53b52480b71cf0160359c39 Create README.md
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$
