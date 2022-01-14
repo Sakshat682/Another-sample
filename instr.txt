@@ -1,1 +1,473 @@
-zckjsehckds hcuidhsklm
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects
+$ git config --get
+error: wrong number of arguments, should be from 1 to 2
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects
+$ git config -l
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects
+$ git config -e
+fatal: not in a git directory
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects
+$ git init
+Initialized empty Git repository in C:/Users/saksh/OneDrive/Desktop/myProjects/.git/
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (master)
+$ git config -l
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (master)
+$ git config -e
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (master)
+$ git config code .
+error: key does not contain a section: code
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (master)
+$ git config code
+error: key does not contain a section: code
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (master)
+$ code git config
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (master)
+$ git config user.name
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (master)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (master)
+$ git config --global user.name "Sakshat Jain"
+bash: $'\302\226git': command not found
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (master)
+$ ^C
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (master)
+$ git config --global user.name "Sakshat Jain"
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (master)
+$ git config --global user.email "sakshat1310jain@gmail.com"
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (master)
+$ git init
+bash: $'\302\203git': command not found
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/saksh/OneDrive/Desktop/myProjects/.git/
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (master)
+$ git config --global init.defaultBranch "main"
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (master)
+$ rm -rf .git
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects
+$ git init
+Initialized empty Git repository in C:/Users/saksh/OneDrive/Desktop/myProjects/.git/
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git remote add origin https://github.com/Sakshat682/test_demo.git
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git pull
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 854 bytes | 27.00 KiB/s, done.
+From https://github.com/Sakshat682/test_demo
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git add .
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git commit -m "Instructions added"
+[main (root-commit) 796f098] Instructions added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 instr.txt
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git push -u origin main
+fatal: helper error (-1): authentication prompt was canceled
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 245 bytes | 245.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'main' on GitHub by visiting:
+remote:      https://github.com/Sakshat682/test_demo/pull/new/main
+remote:
+To https://github.com/Sakshat682/test_demo.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git log
+commit 796f0986d410a3085f4852652fe100650cde6621 (HEAD -> main, origin/main)
+Author: Sakshat Jain <sakshat1310jain@gmail.com>
+Date:   Sat Jan 15 00:20:35 2022 +0530
+
+    Instructions added
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git pull
+Already up to date.
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git pull origin main --allow-unrelated-histories
+From https://github.com/Sakshat682/test_demo
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git push -u origin main
+Everything up-to-date
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git push
+Everything up-to-date
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git pull
+Already up to date.
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git remote rm origin
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git log
+commit 796f0986d410a3085f4852652fe100650cde6621 (HEAD -> main)
+Author: Sakshat Jain <sakshat1310jain@gmail.com>
+Date:   Sat Jan 15 00:20:35 2022 +0530
+
+    Instructions added
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git remote add origin https://github.com/Sakshat682/Another-sample.git
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git log
+commit 796f0986d410a3085f4852652fe100650cde6621 (HEAD -> main)
+Author: Sakshat Jain <sakshat1310jain@gmail.com>
+Date:   Sat Jan 15 00:20:35 2022 +0530
+
+    Instructions added
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git pull origin main --allow-unrelated-histories
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 21 (delta 6), reused 8 (delta 3), pack-reused 0
+Unpacking objects: 100% (21/21), 3.92 KiB | 39.00 KiB/s, done.
+From https://github.com/Sakshat682/Another-sample
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+Merge made by the 'recursive' strategy.
+ README.md | 1 +
+ extra.txt | 0
+ forMe.txt | 0
+ hello.txt | 0
+ world.txt | 1 +
+ 5 files changed, 2 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 extra.txt
+ create mode 100644 forMe.txt
+ create mode 100644 hello.txt
+ create mode 100644 world.txt
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git log
+commit 212cd8bc4fc7fb633d977c00c652f062f6e0f64c (HEAD -> main)
+Merge: 796f098 301fdbd
+Author: Sakshat Jain <sakshat1310jain@gmail.com>
+Date:   Sat Jan 15 00:34:35 2022 +0530
+
+    Merge branch 'main' of https://github.com/Sakshat682/Another-sample
+
+commit 796f0986d410a3085f4852652fe100650cde6621
+Author: Sakshat Jain <sakshat1310jain@gmail.com>
+Date:   Sat Jan 15 00:20:35 2022 +0530
+
+    Instructions added
+
+commit 301fdbdd3b639c11cae22b8902b3f93b502dc452 (origin/main)
+Merge: ed6871a c9d5a9e
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:38:07 2021 +0530
+
+    Merge branch 'main' of https://github.com/Sakshat682/Another-sample into dev
+
+commit ed6871a14b860a8349758d2d875dc5058f99ca9f
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:35:34 2021 +0530
+
+    create extra.txt
+
+commit c9d5a9edb793bd18d74542a3d927f51a28be239e
+Merge: 1465481 9f60601
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:27:43 2021 +0530
+
+    Merge pull request #1 from Sakshat682/dev
+
+    create forMe.txt
+
+commit 9f606012153c3d4a8b587c3664fec30205af85dc
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:24:25 2021 +0530
+
+    create forMe.txt
+
+commit 14654811fc82a48382d4548676ee25578198141a
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:17:56 2021 +0530
+
+    Delete forU.txt
+
+commit 19228268c79aa7a96b85a2d8af708ff78b464c87
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:16:15 2021 +0530
+
+    Create forU.txt
+
+commit 777a905fbbeb1ec624aed76406b7aef83ea6063e
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:12:40 2021 +0530
+
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git push -u origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 543 bytes | 543.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Sakshat682/Another-sample.git
+   301fdbd..212cd8b  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$ git log
+commit 212cd8bc4fc7fb633d977c00c652f062f6e0f64c (HEAD -> main, origin/main)
+Merge: 796f098 301fdbd
+Author: Sakshat Jain <sakshat1310jain@gmail.com>
+Date:   Sat Jan 15 00:34:35 2022 +0530
+
+    Merge branch 'main' of https://github.com/Sakshat682/Another-sample
+
+commit 796f0986d410a3085f4852652fe100650cde6621
+Author: Sakshat Jain <sakshat1310jain@gmail.com>
+Date:   Sat Jan 15 00:20:35 2022 +0530
+
+    Instructions added
+
+commit 301fdbdd3b639c11cae22b8902b3f93b502dc452
+Merge: ed6871a c9d5a9e
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:38:07 2021 +0530
+
+    Merge branch 'main' of https://github.com/Sakshat682/Another-sample into dev
+
+commit ed6871a14b860a8349758d2d875dc5058f99ca9f
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:35:34 2021 +0530
+
+    create extra.txt
+
+commit c9d5a9edb793bd18d74542a3d927f51a28be239e
+Merge: 1465481 9f60601
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:27:43 2021 +0530
+
+    Merge pull request #1 from Sakshat682/dev
+
+    create forMe.txt
+
+commit 9f606012153c3d4a8b587c3664fec30205af85dc
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:24:25 2021 +0530
+
+    create forMe.txt
+
+commit 14654811fc82a48382d4548676ee25578198141a
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:17:56 2021 +0530
+
+    Delete forU.txt
+
+commit 19228268c79aa7a96b85a2d8af708ff78b464c87
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:16:15 2021 +0530
+
+    Create forU.txt
+
+commit 777a905fbbeb1ec624aed76406b7aef83ea6063e
+Author: Sakshat682 <56864491+Sakshat682@users.noreply.github.com>
+Date:   Thu Sep 30 03:12:40 2021 +0530
+
+
+saksh@hasher682 MINGW64 ~/OneDrive/Desktop/myProjects (main)
+$
